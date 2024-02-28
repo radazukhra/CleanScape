@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ChangeNickNameActivity"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/topPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:background="@color/blueset" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="55dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat_bold"
+        android:shadowColor="@color/black"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="Смена никнейма"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/backButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="260dp"
+        android:drawableLeft="@drawable/arrow_back"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:keyboardNavigationCluster="false"
+        android:onClick="startNewActivity"
+        android:text="@string/back_button"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/nickname_new"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topPanel"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/nickname_new"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="20sp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nickname_new"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/password"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="20sp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:id="@+id/registration"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@color/blue_main"
+        android:text="@string/save_button"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/montserrat_bold"
+        app:cornerRadius="100dp"/>
+
+</RelativeLayout>

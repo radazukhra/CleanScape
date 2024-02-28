@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ProfileActivity"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/topPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:background="@color/blueset">
+    </View>
+
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/topPanel"
+        android:layout_above="@id/bottom_panel">
+
+        <LinearLayout
+            android:id="@+id/profile_pic_bg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/default_pfp" />
+            <LinearLayout
+                android:id="@+id/layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Имя"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="nickname"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_settings"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="Настройки"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/my_posts"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Мои публикации"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_my_posts"
+            android:drawablePadding="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Выйти"
+            android:drawableLeft="@drawable/ic_logout"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+
+
+    <View
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/grey_appbar"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_panel_table"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginStart="30dp"
+            android:id="@+id/home_button"
+            android:src="@drawable/ic_home"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="center"
+            />
+        <View
+            android:id="@+id/view1"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="33.3"/>
+
+        <ImageView
+            android:id="@+id/new_post_button"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_new_post" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="33.3"/>
+
+        <ImageView
+            android:id="@+id/favorites_button"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_favorites" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="33.3"/>
+
+        <ImageView
+            android:id="@+id/my_profile_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@color/grey_appbar"
+            android:src="@drawable/ic_profile_on"
+            android:layout_marginEnd="30dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="55dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat_bold"
+        android:shadowColor="@color/black"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="Профиль"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+
+
+</RelativeLayout>
